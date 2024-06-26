@@ -6,11 +6,14 @@ import mongoose from 'mongoose';
 dotenv.config();
 
 const app = express();
-const Port = process.env.PORT || 3001;
 
 // Middleware
+app.use(cors());    
 app.use(express.json());
-app.use(cors()); 
+
+const Port = process.env.PORT || 3001;
+
+
 
 // MongoDB connection
 const mongoURI = process.env.MONGO_URI;
