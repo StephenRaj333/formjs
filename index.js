@@ -10,12 +10,7 @@ const Port = process.env.PORT || 3001;
 
 // Middleware
 app.use(express.json());
-const corsOptions = {
-    origin: 'https://form-sxxedu.netlify.app/',  
-    optionsSuccessStatus: 200,
-  };
-  
-  app.use(cors(corsOptions));
+app.use(cors()); 
 
 // MongoDB connection
 const mongoURI = process.env.MONGO_URI;
